@@ -1,35 +1,32 @@
+//Method for true/false output
+
 function trueFalseFunction(summa) {
 
-    var funny = new RegExp("^[01]*$");
+    var checkSymbol = new RegExp("^[01]*$");
 
     if (/\D/.test(summa) || summa.length !== 27) {
-        // document.write("Something is wrong with the whole input");
 
         return "Invalid Message";
 
     }
 
-    var summaPrefix = summa.substring(0, 2);
-    // document.write(" prefix is" + summaPrefix);
-
     var numbertoCheck = parseInt(summa.substring(0, 2));
 
 
+    //Checking that the AA are correct
     if (numbertoCheck < 7 || numbertoCheck > 49) {
 
-        // document.write(" Something is wrong with prefix");
         return "Invalid Message";
 
     }
 
 
     summa = summa.substring(2, 24);
-    // document.write(" Summa to check" + summa);
 
-    //Checking that user's input is valid. MESSAGE IS
-    if (/\D/.test(summa) || !funny.test(summa)) {
 
-        // document.write(" Something is wrong with summa");
+    //Checking that user's input BBBB.. is valid
+    if (/\D/.test(summa) || !checkSymbol.test(summa)) {
+
         return "Invalid Message";
 
     }
@@ -162,11 +159,9 @@ function trueFalseFunction(summa) {
         }
 
     }
-    // document.write(count);
-    // document.write(count === numbertoCheck);
+
 
     return (count === numbertoCheck);
-
 
 }
 

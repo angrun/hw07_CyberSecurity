@@ -1,15 +1,18 @@
+
+//Method for counting the result, output type: "AA"
+
+
 function myFunction(summa) {
 
-    var funny = new RegExp("^[01]*$");
+    var checkSymbol = new RegExp("^[01]*$");
 
 
     //Checking that user's input is valid. MESSAGE IS
-    if (/\D/.test(summa) || summa.length !== 25 || !funny.test(summa)) {
+    if (/\D/.test(summa) || summa.length !== 25 || !checkSymbol.test(summa)) {
 
         return "Invalid Message";
 
     }
-
 
     var count = 0;
     var check = true;
