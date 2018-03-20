@@ -21,7 +21,7 @@ function trueFalseFunction(summa) {
     }
 
 
-    summa = summa.substring(2, 24);
+    summa = summa.substring(2, 27);
 
 
     //Checking that user's input BBBB.. is valid
