@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Anna Hacker Volume Two</title>
+		<h1 align="center">Welcome to The Evolution Of Trust</h1>
+		<h2 align="center">Feel free to get your choices counter</h2>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+		<script src="app.js"></script>
+	</head>
+
+	<script>
+
+
+	$( document ).ready(function() {
+		// Process button click
+		$( "input.calculate" ).click(function() {
+
+			// Get value field with jquery
+			var val = $('input#value').val();
+
+			// Your calculations here (example)
+			var result = trueFalseFunction(val);
+
+			// Append our result to result input
+			$('input#result').val(result);
+
+		});
+	});
+
+
+	</script>
+
+	<body>
+
+
+	<div class="container">
+			<div class="form-group mt-2">
+				<input type="text" class="form-control" id="value" name="value" placeholder="Value">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="result" name="result" placeholder="Result" disabled>
+			</div>
+			<input type="button" name="submit" class="btn btn-primary calculate" value="Submit">
+		</div>
+	</body>
+
+
+</html>
+
+
+<style>
+
+	h1{
+		font-family: fantasy;
+		position: relative;
+		margin-left: -22px; /* 15px padding + 7px border ribbon shadow*/
+		margin-right: -22px;
+		padding: 15px;
+		background: #e5e5e5;
+		background: linear-gradient(#f5f5f5, #e5e5e5);
+		box-shadow: 0 -1px 0 rgba(255,255,255,.8) inset;
+		text-shadow: 0 1px 0 #fff;
+
+	 }
+
+
+
+	h2{
+		font-family: fantasy;
+		width: 60%;
+		margin: 50px auto;
+		padding: 15px;
+		position: relative; /*needed for heading4 rule*/
+		z-index: 0; /* again, just for heading4 rule*/
+		border: 7px solid #cecece;
+		background: #fff;
+		background-clip: padding-box;
+		box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+
+	}
+
+    </style>
